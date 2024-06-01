@@ -1,5 +1,4 @@
-import { Box, Container, VStack, Heading, Text, SimpleGrid, Image, Link, Flex } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import { Box, Container, VStack, Heading, Text, SimpleGrid, Image } from "@chakra-ui/react";
 
 const sampleProducts = [
   {
@@ -25,16 +24,13 @@ const sampleProducts = [
   },
 ];
 
-const Index = () => {
+const Products = () => {
   return (
     <Container maxW="container.xl" p={4}>
       <VStack spacing={8}>
         <Heading as="h1" size="2xl" textAlign="center" mt={8}>
-          Welcome to Electronics Store
+          Our Products
         </Heading>
-        <Text fontSize="lg" textAlign="center">
-          Discover the latest in electronic devices
-        </Text>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt={8}>
           {sampleProducts.map((product) => (
             <Box key={product.id} borderWidth="1px" borderRadius="lg" overflow="hidden" p={4}>
@@ -54,4 +50,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Products;
